@@ -25,7 +25,7 @@ public final class App {
             var companyId = ctx.pathParam("id");
             var getCompany = COMPANIES.stream().filter(id -> id.containsValue(companyId)).toList();
             if (getCompany.isEmpty()) {
-                throw new NotFoundResponse("Company not found.");
+                throw new NotFoundResponse("Company not found");
             } else {
                 ctx.json(getCompany);
             }
