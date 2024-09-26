@@ -23,7 +23,7 @@ public final class App {
         // BEGIN
         app.get("/companies/{id}", ctx -> {
             var companyId = ctx.pathParam("id");
-            var getCompany = COMPANIES.stream().filter(id -> id.containsValue(companyId)).toList();
+            var getCompany = COMPANIES.stream().filter(id -> id.containsValue(companyId)).toList().get(0);
             if (getCompany.isEmpty()) {
                 throw new NotFoundResponse("Company not found");
             } else {
