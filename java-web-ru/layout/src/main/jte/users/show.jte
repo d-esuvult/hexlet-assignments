@@ -4,7 +4,7 @@
 @template.layout.page(
 content = @`
 
-    <div><h1>${page.getUser().getFirstName()}</h1></div>
+    <div><h1>${page.getUser().getFirstName()} ${page.getUser().getLastName()}</h1></div>
 
 `
 )
