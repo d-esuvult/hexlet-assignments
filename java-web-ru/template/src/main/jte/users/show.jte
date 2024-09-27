@@ -9,6 +9,6 @@
     <title></title>
     </head>
     <body>
-        <h1>Пользователь ${page.getUser().getFirstName()}</h1>
+        <h1>Пользователь ${page.getUser().getFirstName()} ${page.getUser().getLastName()}</h1>
     </body>
 </html>
