@@ -1,0 +1,20 @@
+package exercise.dto.articles;
+
+import io.javalin.validation.ValidationError;
+import java.util.Map;
+import java.util.List;
+
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.Getter;
+
+// BEGIN
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+public class BuildArticlePage {
+    public String title;
+    public String content;
+    public Map<String, List<ValidationError<Object>>> errors;
+}
+// END
